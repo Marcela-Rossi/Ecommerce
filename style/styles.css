@@ -1,0 +1,116 @@
+/* Importando uma fonte do google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Resetando o css da pagina */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    /* background-image: url("https://cdn.awsli.com.br/600x450/1919/1919257/produto/227652091/002-va1uujruaf.jpg"); */
+    
+    
+}
+body{
+    /* Inserindo a fonte que eu importei */
+    font-family: "Poppins", serif;
+
+}
+
+img{
+    width: 50px;
+    /* Garante que a imagem nunca ultrapasse o espaço disponível */
+    max-width: 100%;
+    /* Mantém a proporção original */
+    height: auto;
+    margin-right: 50px;
+}
+
+
+header{
+    /* Fixar o cabeçalho */
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Mantém acima de outros elementos  */
+    z-index: 1000;
+    /* APlicando o display flex pra organizar meu cabeçalho */
+    display: flex;
+    /* Espaçamento igual entre os meios */
+    justify-content: space-between;
+    /* alinha verticalmente */
+    align-items: center;
+    background-color: rgb(10, 10, 55);
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+a{
+    /* Tirando o estilo de ancora padrão */
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+}
+/* APlicando um novo estilo quando passo o mouse em cima (hover) */
+a:hover{
+    transition: 0.5s;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 8px;
+    transform: scale(1.5,1.5);
+}
+.imagem-cabecalho{
+    width: 50px;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+.produto{
+    width: 200px;
+    height: 250px;
+     
+}
+
+img{
+    width:150px ;
+    height: 200;
+}
+section{
+    display: grid;
+    grid-template-columns:33% 33% 33%;   
+}
+
+footer{
+    padding: 15px;
+    background-color: rgb(38, 38, 117);
+    text-align: center;
+    color: white;
+}
+
+
+@media (max-width:600px){
+    header{
+        nav{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        img{
+            /* diminuir o tamanho da imagem e ajustar o espaçamento */
+        width: 40px;
+        margin-right: 20px;
+    }
+    }
+
+    main{
+        section{
+            display: grid;
+            grid-template-columns: 100%;
+        }
+    }
+
+}
